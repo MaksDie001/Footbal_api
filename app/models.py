@@ -5,7 +5,7 @@ class Team(models.Model):
     name = models.CharField(max_length=255)
     title = models.TextField()
     body = models.TextField()
-
+    img=models.ImageField(upload_to="photos/%Y/%m/%d/", null=True)
 
 class Matc(models.Model):
     date = models.DateTimeField(auto_created=True)
